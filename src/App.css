@@ -1,0 +1,78 @@
+:root {
+  /* Gradient Variables - Change these to customize your colors */
+  --gradient-start: #2560e0;
+  --gradient-end: #00ce4f;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.link-section {
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+  }
+
+  .social-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
